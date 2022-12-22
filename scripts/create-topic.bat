@@ -1,1 +1,0 @@
-kafka-topics.bat --bootstrap-server localhost:29092 --create --topic test – topic-1 --config "segment.bytes=1024" --config "cleanup.policy=compact" --config "cleaner.max.compaction.lag.ms =60000"
