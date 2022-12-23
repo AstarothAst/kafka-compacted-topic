@@ -22,22 +22,22 @@ public class TopicConfigBuilder {
         this.cleanupPolicy = cleanupPolicy;
     }
 
-    TopicConfigBuilder setMaxCompactionLagMs(Long maxCompactionLagMs) {
+    public TopicConfigBuilder setMaxCompactionLagMs(Long maxCompactionLagMs) {
         this.maxCompactionLagMs = maxCompactionLagMs.toString();
         return this;
     }
 
-    TopicConfigBuilder setDeleteRetentionMs(Long deleteRetentionMs) {
+    public TopicConfigBuilder setDeleteRetentionMs(Long deleteRetentionMs) {
         this.deleteRetentionMs = deleteRetentionMs.toString();
         return this;
     }
 
-    TopicConfigBuilder setCleanupPolicy(String cleanupPolicy) {
+    public TopicConfigBuilder setCleanupPolicy(String cleanupPolicy) {
         this.cleanupPolicy = cleanupPolicy;
         return this;
     }
 
-    Map<String, String> build() {
+    public Map<String, String> build() {
         Map<String, String> config = new HashMap<>();
 
         Optional.ofNullable(maxCompactionLagMs)

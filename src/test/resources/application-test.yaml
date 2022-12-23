@@ -1,16 +1,20 @@
-server:
-  port: 30600
+#server:
+#  port: 30600
+#
+#spring:
+#  kafka:
+#    consumer:
+#      bootstrap-servers: localhost:29092
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+#      group-id: test-group
+#      properties:
+#        spring.json.trusted.packages: '*'
+#    producer:
+#      bootstrap-servers: localhost:29092
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-spring:
-  kafka:
-    consumer:
-      bootstrap-servers: localhost:29092
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      group-id: test-group
-      properties:
-        spring.json.trusted.packages: '*'
-    producer:
-      bootstrap-servers: localhost:29092
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+logging:
+  level:
+    org.apache.kafka: off
