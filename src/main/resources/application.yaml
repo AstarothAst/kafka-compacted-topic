@@ -1,0 +1,20 @@
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
+    threads:
+      max: 10
+      min-spare: 1
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    enabled-by-default: true
+logging:
+  level:
+    org.apache.kafka: off
