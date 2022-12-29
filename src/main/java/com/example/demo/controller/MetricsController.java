@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.actuate.metrics.MetricsEndpoint;

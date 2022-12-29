@@ -5,6 +5,7 @@ server:
     threads:
       max: 10
       min-spare: 1
+  port: 30600
 
 management:
   endpoint:
@@ -15,6 +16,23 @@ management:
       exposure:
         include: '*'
     enabled-by-default: true
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:29092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      group-id: test-group
+      properties:
+        spring.json.trusted.packages: '*'
+    producer:
+      bootstrap-servers: localhost:29092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
 logging:
   level:
     org.apache.kafka: off
+
+is-reset-kafka-read-offset-on-startup: true
